@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meditation - My Hobby</title>
+<style>
+/* ================= THEME ================= */
+:root {
+  --bg: linear-gradient(135deg, rgb(173, 216, 255) 0%, rgb(201, 179, 255) 100%);
+  --card: rgba(255,255,255,0.95);
+  --text: #2d2d2d;
+  --accent: #a78bfa;
+  --link: #7d5aff;
+  --img-filter: brightness(1);
+  --footer-text: #4d4d4d;
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, rgb(0,0,0) 0%, rgb(35, 0, 50) 100%);
+  --card: rgba(28,28,36,0.95);
+  --text: #eaeaf0;
+  --accent: #c6b3ff;
+  --link: #b8a8ff;
+  --img-filter: brightness(1.15);
+  --footer-text: #cfcfe0;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  transition: 0.5s ease;
+}
+
+/* ================= BUTTON ================= */
+.dark-btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.toggle-btn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 2px solid var(--accent);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ================= MAIN CARD ================= */
+.main-card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 35px;
+  border-radius: 25px;
+  background: var(--card);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* ================= TITLE ================= */
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.title-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.emoji {
+  grid-row: 1;
+  grid-column: 1;
+  font-size: 2.6rem;
+}
+
+.title-text {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.title-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.35);
+}
+
+.subtitle {
+  grid-row: 2;
+  grid-column: 2;
+  margin-top: 8px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.25);
+}
+
+/* ================= FEATURED IMAGE ================= */
+.featured {
+  margin-bottom: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.featured img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: var(--img-filter);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.featured img:hover {
+  transform: scale(1.05);
+}
+
+/* FLOAT ANIMATION */
+.first-img {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+  filter: var(--img-filter);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.35);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+/* ================= TEXT ================= */
+.description {
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.description p {
+  margin-bottom: 16px;
+}
+
+/* ================= BUTTON ================= */
+.book-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 12px 28px;
+  border-radius: 28px;
+  border: 2px solid var(--accent);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ================= LINKS ================= */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 0.85rem;
+  color: var(--footer-text);
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+<div class="dark-btn-wrapper">
+  <button class="toggle-btn" id="themeBtn" onclick="toggleDarkMode()">☀️ Change Theme</button>
+</div>
+
+<div class="main-card">
+
+  <!-- TITLE -->
+  <div class="title">
+    <div class="title-grid">
+      <div class="emoji">🧘‍♀️</div>
+      <div class="title-text"><h1>Meditation</h1></div>
+      <div class="subtitle">My Favorite Hobby</div>
+    </div>
+  </div>
+
+  <!-- FEATURED IMAGE -->
+  <div class="featured">
+    <a href="https://www.mindful.org/meditation/mindfulness-getting-started/" target="_blank">
+      <img class="first-img" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" alt="">
+    </a>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid">
+    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+    <img src="https://img.freepik.com/premium-photo/woman-meditating-forest-with-sun-shining-through-trees_860805-1129.jpg" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz9yMEfVdNzMRlNBtJ9ywrfJSo1KGe_Nn7Bg&s" alt="">
+  </div>
+
+  <!-- TEXT -->
+  <div class="description">
+    <p>Meditation is a quiet return to yourself. A gentle pause in a fast-moving world. It is not about escaping life, but about meeting it more fully, with clarity and calmness.</p>
+    <p>In stillness, the mind softens, the breath deepens, and the heart begins to speak. Through meditation, we learn to observe rather than react, to accept rather than resist.</p>
+    <p>It brings peace not because life becomes perfect, but because we become present. Stress loosens its grip, thoughts settle like dust, and a deeper awareness begins to rise.</p>
+    <p>The purpose of meditation is not to become someone new, but to remember who you truly are: steady, whole, and enough. In that space, healing happens quietly, wisdom grows naturally, and a gentle sense of connection to yourself and the world unfolds.</p>
+    <p>Even a few moments of stillness can become a sanctuary — a place where you can breathe, reset, and simply be.</p>
+    <button class="book-btn" onclick="bookClass()">Book Meditation Class</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  Coded with 💜 by <a href="#">Mbali Mkhize with HTML, CSS and JavaScript</a>
+</div>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+  const btn = document.getElementById("themeBtn");
+  btn.innerHTML = document.body.classList.contains("dark") ? "🌕 Change Theme" : "☀️ Change Theme";
+}
+
+function bookClass() {
+  alert("Thank you for your interest 🌿 A meditation class coming soon.");
+}
+</script>
+</body>
+</html>
