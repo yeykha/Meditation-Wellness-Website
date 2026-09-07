@@ -1,5 +1,7 @@
 Meditation & Wellness Website 🧘‍♀️
-![Meditation & Wellness Website](Meditation-Website-homepage.jpg)
+<p align="center">
+  <img src="Meditation-Website-homepage.jpg" alt="Meditation & Wellness Website" width="800">
+</p>
 A responsive meditation and wellness website designed to provide users with helpful information about meditation while creating a calm and welcoming online experience.
 
 🌿 About the Project
