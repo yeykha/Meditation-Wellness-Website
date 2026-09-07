@@ -19,7 +19,7 @@ HTML5
 CSS3
 JavaScript
 💻 Live Demo
-View the live website
+[View the live website] (https://yeykha.github.io/Meditation-Wellness-Website/)
 
 📚 What I Learned
 Through this project, I gained practical experience with:
